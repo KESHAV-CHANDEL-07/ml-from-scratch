@@ -1,70 +1,63 @@
-## ✅ Lasso Regression — Student Performance Prediction
+\## ✅ Phase 5: Regularization — Ridge & Lasso Regression
 
-This project applies Lasso Regression (L1 Regularization) to predict a student's final exam score based on academic and lifestyle factors.
-
-### 📊 Features Used
-
-- **study_hours**: Average study hours per day
-- **sleep_hours**: Average sleep hours per night
-- **school_rank**: Rating of the school (1–10)
-- **mobile_usage**: Daily mobile usage in hours
-- **extra_classes**: Whether the student attended extra coaching (0 or 1)
-- **junk_food**: Number of junk food meals per week
+This folder contains my implementation of **Ridge (L2)** and **Lasso (L1)** Regression completely from scratch, using only Python and NumPy.
 
 ---
 
-### 🎯 Target
+### 🔹 Ridge Regression
 
-- **Final exam score** (out of 100)
+**Use Case:** Predicting the price of a used car  
+**Features used:**
+- Engine size (liters)
+- Mileage (km driven)
+- Number of seats
+- Age (years)
 
----
-
-### 🔍 Why Lasso?
-
-Lasso (L1) regularization helps:
-- Automatically shrink irrelevant or weak features to **zero**
-- Perform **feature selection** while training
-- Create a **sparser**, more interpretable model
-
-This is useful when some lifestyle habits may not actually impact performance.
-
----
-
-### 🧠 Workflow
-
-- Data was standardized (both features and target)
-- Lasso loss = MSE + λ * sum(abs(weights))
-- Trained models for λ = 0, 0.1, 1, 10
-- Compared predictions for all students
-- Predicted final score for a new student using all trained models
+**What I learned:**
+- How Ridge adds L2 penalty: `λ * sum(w²)`
+- How it reduces overfitting by shrinking weights
+- How changing λ (0, 1, 100) affects predictions and model complexity
+- How to scale features and target, and unscale predictions
 
 ---
 
-### 📈 Insights
+### 🔸 Lasso Regression
 
-- As λ increases, Lasso **shrinks less important weights**
-- With higher λ values, the model focuses only on the **strongest features**
-- Helps prevent overfitting in small, noisy datasets
+**Use Case:** Predicting a student's final exam score  
+**Features used:**
+- Study hours
+- Sleep hours
+- School rank
+- Mobile usage
+- Attended extra classes (yes/no)
+- Junk food intake
 
----
-
-### 🧪 Test Example
-
-Predicted final exam scores for a student who:
-
-- Studies 3 hours
-- Sleeps 7 hours
-- Goes to a high-ranked school
-- Uses phone moderately
-- Attends extra coaching
-- Eats junk food occasionally
-
-This scenario highlights Lasso's ability to adapt its prediction by choosing which features matter most under different λ values.
+**What I learned:**
+- How Lasso adds L1 penalty: `λ * sum(|w|)`
+- How it helps with feature selection by making some weights exactly zero
+- Observed impact of different λ values (0, 0.1, 1, 10)
 
 ---
 
-### 🚀 What You Learn
+### ✅ Common to Both
 
-- How L1 regularization works in practice
-- How it differs from Ridge (L2)
-- How Lasso helps reduce overfitting **and** select features
+- Full manual gradient descent
+- Feature & target standardization
+- Predictions rescaled to real-world values
+- Multiple λ values tested for comparison
+- Console output formatted cleanly
+- No external ML libraries used (no scikit-learn!)
+
+---
+
+### 🧠 Why This Matters
+
+Regularization is essential when:
+- The model overfits
+- Some features may be redundant
+- You want simpler, generalizable models
+
+Now I understand how both Ridge and Lasso control complexity — and when to use each.
+
+---
+
