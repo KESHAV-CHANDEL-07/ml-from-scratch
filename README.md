@@ -48,6 +48,19 @@ Welcome to my personal ML journey where I build everything from **scratch using 
 
 ---
 
+### ✅ Phase 5: Regularization (Ridge & Lasso)
+
+* Implemented both Ridge (L2) and Lasso (L1) Regression from scratch.
+* Applied Ridge on a used car price prediction dataset with 4 features.
+* Applied Lasso on a student performance prediction dataset with academic & lifestyle inputs.
+* Compared predictions across different λ values (0, 0.1, 1, 10).
+* Observed how Ridge reduces overfitting by shrinking weights.
+* Observed how Lasso performs feature selection by driving some weights to zero.
+
+📁 Folder: `Phase_5_Regularization/`
+
+---
+
 ## 🧠 Why I'm Doing This
 
 I want to:
@@ -70,7 +83,6 @@ I want to:
 
 ## 🚀 What's Next
 
-* Phase 5: Regularization (Ridge, Lasso)
 * Phase 6: Logistic Regression with multiclass (softmax)
 * Phase 7: Apply scikit-learn and compare results
 
@@ -78,9 +90,9 @@ I want to:
 
 ## 🌐 About Me
 
-**Name:** Keshav Chandel
-**Email:** [23bec053@nith.ac.in](mailto:23bec053@nith.ac.in)
-**Passion:** Combining Machine Learning with hardware (Raspberry Pi, Arduino, IoT)
+**Name:** Keshav Chandel  
+**Email:** [23bec053@nith.ac.in](mailto:23bec053@nith.ac.in)  
+**Passion:** Combining Machine Learning with hardware (Raspberry Pi, Arduino, IoT)  
 **Goal:** Internship-ready profile with projects that show real ML skill
 
 ---
