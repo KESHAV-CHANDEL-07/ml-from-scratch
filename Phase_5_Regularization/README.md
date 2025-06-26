@@ -1,4 +1,4 @@
-\## ✅ Phase 5: Regularization — Ridge & Lasso Regression
+## ✅ Phase 5: Regularization — Ridge & Lasso Regression
 
 This folder contains my implementation of **Ridge (L2)** and **Lasso (L1)** Regression completely from scratch, using only Python and NumPy.
 
