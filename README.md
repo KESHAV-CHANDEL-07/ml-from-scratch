@@ -61,6 +61,19 @@ Welcome to my personal ML journey where I build everything from **scratch using 
 
 ---
 
+### ✅ Phase 6: Decision Tree Classifier
+
+* Implemented a decision tree classifier fully from scratch with Python & NumPy.
+* Calculated entropy and information gain manually.
+* Selected best features to split using a simple greedy algorithm.
+* Handled categorical variables with binary splits.
+* Visualized each calculation step with detailed printed output.
+* Prepared for extending to random forests next.
+
+📁 Folder: `Phase_6_Decision_Tree/`
+
+---
+
 ## 🧠 Why I'm Doing This
 
 I want to:
@@ -83,8 +96,8 @@ I want to:
 
 ## 🚀 What's Next
 
-* Phase 6: Logistic Regression with multiclass (softmax)
-* Phase 7: Apply scikit-learn and compare results
+* Phase 7: Random Forest from scratch with bagging
+* Phase 8: K-Nearest Neighbors from scratch
 
 ---
 
