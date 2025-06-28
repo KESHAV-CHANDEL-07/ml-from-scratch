@@ -1,30 +1,34 @@
-# 🌳 Decision Tree From Scratch
+# 🌳 Phase 6: Decision Tree — Machine Learning From Scratch
 
-This project demonstrates a **Decision Tree Classifier implemented entirely from scratch** using Python and NumPy.
+This project demonstrates a **Decision Tree Classifier implemented entirely from scratch** using Python and NumPy. In this phase, I explored both **Gini impurity** and **Entropy** as splitting criteria to deeply understand how a tree selects the best feature and threshold at each step.
 
 ## Features
 
-- Calculates **entropy** to measure uncertainty
-- Calculates **information gain** to choose the best split
+- Calculates **entropy** to measure uncertainty and information gain
+- Calculates **Gini impurity** to measure class impurity
+- Supports choosing the best split based on either entropy or gini
+- Manually selects the best split by minimizing weighted impurity or maximizing information gain
 - Handles categorical features with binary-style splitting
-- Builds the tree recursively
+- Builds the tree recursively with max depth control to avoid overfitting
 - Makes predictions using the learned tree rules
-- Includes detailed print statements to trace every step
+- Includes detailed print statements to trace every calculation and step
 
-## Project Structure
+## What I Learned
 
-- `decision_tree.py` : implementation of the tree and prediction logic
-- `README.md` : this file
-- Training data is included in simple encoded form (like 0/1/2 for categories)
+- How to manually calculate Gini impurity and entropy to measure data purity
+- How to partition data into left and right branches
+- How to build trees recursively from scratch
+- How overfitting occurs in fully grown trees, and the importance of pruning or limiting max depth
+- How decision trees form the base of more advanced ensemble models like Random Forests
 
 ## Example
 
-The code uses a simplified **Play Tennis** dataset:
+A simplified **Play Tennis** dataset:
 - Outlook (0=Sunny, 1=Overcast, 2=Rain)
 - Humidity (0=High, 1=Normal)
 - Windy (0=False, 1=True)
 
-The labels are:
+Target labels:
 - 0 = No
 - 1 = Yes
 
@@ -32,3 +36,4 @@ The labels are:
 
 ```bash
 python decision_tree.py
+

@@ -1,7 +1,7 @@
 import numpy as np
 
 def entropy(labels):
-    classes, counts = np.unique(labels, return_counts=True)
+    classes,counts = np.unique(labels, return_counts=True)
     probabilities = counts / counts.sum()
     ent = -np.sum(probabilities * np.log2(probabilities + 1e-9))
     print(f"Entropy for labels {labels} = {ent:.4f}")
@@ -84,9 +84,7 @@ def predict(tree, sample):
         else:
             return predict(tree['right'], sample)
 
-# -------------
 # Training data
-# -------------
 
 X = np.array([
     [0, 0, 0],  # Sunny, High, False
@@ -99,16 +97,14 @@ X = np.array([
 ])
 y = np.array([0, 0, 1, 1, 0, 1, 1])
 
-# -------------
-# Build and test
-# -------------
-
+#Test
+# Build the decision tree
 feature_indices = [0,1,2]
 tree = build_tree(X, y, feature_indices)
 
 test_data = [
-    [0, 0, 0],
-    [1, 1, 0],
+    [0, 0, 1],
+    [1, 0, 0],
     [2, 1, 0],
     [2, 0, 1]
 ]
