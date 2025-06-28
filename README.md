@@ -64,7 +64,7 @@ Welcome to my personal ML journey where I build everything from **scratch using 
 ### ✅ Phase 6: Decision Tree Classifier
 
 * Implemented a decision tree classifier fully from scratch with Python & NumPy.
-* Calculated entropy and information gain manually.
+* Calculated **both entropy and Gini index** to measure uncertainty.
 * Selected best features to split using a simple greedy algorithm.
 * Handled categorical variables with binary splits.
 * Visualized each calculation step with detailed printed output.
