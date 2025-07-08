@@ -74,6 +74,23 @@ Welcome to my personal ML journey where I build everything from **scratch using 
 
 ---
 
+### ✅ Phase 7: Random Forest Classifier
+
+* Built a full **Random Forest Classifier from scratch** using NumPy.
+* Used **bootstrap sampling + majority voting**.
+* Implemented manual **stratified train-test split**.
+* Evaluated with custom accuracy, precision, recall, and F1-score functions.
+* Tried on **two versions** of heart disease datasets:
+  - **Multiclass (0–4)** → struggled due to class imbalance
+  - **Binary (0/1)** → high accuracy (~93%)
+* Compared performance with `sklearn`'s `RandomForestClassifier` and `DecisionTreeClassifier`.
+* Used `graphviz` to visualize the decision tree as a colorful PDF.
+* Logged full training pipeline in a clean, reproducible script.
+
+📁 Folder: `Phase_7_Random_Forest/`
+
+---
+
 ## 🧠 Why I'm Doing This
 
 I want to:
@@ -89,15 +106,18 @@ I want to:
 
 * Python 3
 * NumPy
+* Pandas (for preprocessing only)
 * Matplotlib (only for optional plots)
-* 💡 No scikit-learn or ML libraries — everything is done manually!
+* Graphviz (for decision tree rendering)
+* 💡 No scikit-learn or ML libraries for core logic — everything is done manually!
 
 ---
 
 ## 🚀 What's Next
 
-* Phase 7: Random Forest from scratch with bagging
-* Phase 8: K-Nearest Neighbors from scratch
+* Phase 8: K-Nearest Neighbors (KNN) from scratch
+* Phase 9: Naive Bayes Classifier
+* Phase 10: Neural Network from scratch (using only NumPy)
 
 ---
 
@@ -110,4 +130,5 @@ I want to:
 
 ---
 
-Thanks for checking out my work!
+Thanks for checking out my journey 🚀  
+**Built with ❤️ by Keshav Chandel**
