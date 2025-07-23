@@ -15,7 +15,7 @@ X_raw = np.array([
 y_raw = np.array([[4.5], [6.0], [5.5], [7.0], [3.8], [6.2], [6.8]])  # Prices in lakhs
 
 X_test = np.array([
-    [1.6, 35000, 5, 3],
+    [0.8, 18000, 5, 15],
     [2.0, 90000, 7, 6]
 ], dtype=float)
 
@@ -65,8 +65,3 @@ for i, x in enumerate(X_test):
     print(f"\nInput [{formatted}]:")
     for lam in lambdas:
         print(f"  λ = {lam:<3}: Predicted Price = {results[lam][i]:.2f} lakhs")
-
-
-
-
-
