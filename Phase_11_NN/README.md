@@ -1,106 +1,45 @@
-# 🧠 AI-Driven Personalized Skincare Diagnosis and Recommendation System
+# My CNN from Scratch Journey
 
-## 🧭 Objective
-
-This project aims to build a **clinically trustworthy, fairness-aware, and privacy-respecting ML system** that:
-- Diagnoses facial skin conditions (e.g., acne, pigmentation, dryness)
-- Incorporates lifestyle data (e.g., sleep, skincare habits, SPF use)
-- Recommends only **necessary** skincare treatments or products
-- Ensures performance equity across **diverse skin tones**
+This repository contains my exploration and hands-on implementation of a Convolutional Neural Network (CNN) from scratch using **NumPy** and **PyTorch**. The goal of this project is to understand the inner workings of CNNs, from convolution to fully connected layers, and to implement gradient descent for training.
 
 ---
 
-## 🔧 Technical Architecture
+## Overview
 
-### 🔹 Multimodal Input
-- **Facial Images**: Multi-angle facial images captured in natural lighting
-- **Lifestyle Data**: Structured inputs (sleep, sunscreen usage, diet, skin sensitivity, etc.)
+Convolutional Neural Networks (CNNs) are a class of deep learning models commonly used for image classification and recognition. Unlike standard neural networks, CNNs leverage **convolutional layers**, **activation functions**, and **pooling layers** to efficiently learn spatial hierarchies in images.
 
-### 🔹 Modeling Strategy
+In this project, I implemented the following components from scratch:
 
-| Component        | Model / Technique                                           |
-|------------------|-------------------------------------------------------------|
-| 🖼️ Image Encoder | `Swin Transformer` or `EfficientNetV2` + (optional) `DINOv2` |
-| 📊 Tabular Encoder | `TabTransformer` or `CatBoost`                             |
-| 🔗 Fusion Layer   | Concatenation + `Cross-Attention` / `Residual Dense Blocks` |
-| 🎯 Output Heads   | Multi-task: skin condition detection, severity regression, and product recommendation |
+1. **Data Loading**  
+   - MNIST dataset (handwritten digits 0–9)
+   - Preprocessing: normalization and reshaping
 
----
+2. **Forward Pass Components**
+   - **Convolution Layer**: Sliding window convolution over input images with multiple kernels
+   - **ReLU Activation**: Introduced non-linearity
+   - **Max Pooling**: Downsampling feature maps
+   - **Flattening**: Conversion of pooled feature maps into a 1D vector
+   - **Dense Layer**: Fully connected layer for classification
+   - **Softmax**: Probability distribution over classes
 
-## 🧪 Training Strategy
-
-### Phase 1: Self-Supervised Pretraining
-- Pretrain image encoder with **DINOv2** or **SimCLR** on unlabeled skin images
-
-### Phase 2: Supervised Fine-tuning
-- Train on public medical datasets:
-  - `HAM10000`
-  - `ISIC Archive`
-  - Custom-labeled face datasets (via dermatologist collaboration)
+3. **Training Components**
+   - Implemented **cross-entropy loss** for classification
+   - Added **gradient descent updates** for weights and biases
+   - Training loop with **epochs**, manually updating parameters
+   - CUDA-enabled using **PyTorch** for GPU acceleration
 
 ---
 
-## ⚖️ Fairness & Bias Mitigation
+## Dependencies
 
-- Evaluate and debias across **Monk Skin Tone Scale** and **Fitzpatrick Skin Types**
-- Use:
-  - `GroupDRO` for worst-group error minimization
-  - `Adversarial Debiasing` to avoid skin tone shortcut learning
-- Model evaluated for **parity across ethnic groups**
+The project uses the following Python libraries:
 
----
+- [PyTorch](https://pytorch.org/) (for CUDA support and tensor operations)
+- [TensorFlow Keras](https://www.tensorflow.org/api_docs/python/tf/keras/datasets/mnist) (for loading MNIST dataset)
+- [Matplotlib](https://matplotlib.org/) (optional, for visualizing images)
 
-## 🧴 Personalized Recommendation Engine
+Install dependencies via pip:
 
-- **Hybrid recommender**:
-  - Rule-based filtering (e.g. acne → no comedogenic oils)
-  - Reinforcement Learning (`Deep Q-Learning`, `Bandits`) for optimal long-term skincare strategy
-- Personalized recommendations improve with **user feedback** (ratings, skin improvement logs)
-
----
-
-## 🔍 Explainability
-
-- Visual: `Grad-CAM++`, `Saliency Maps`
-- Tabular: `SHAP`, `LIME`
-- Output includes:
-  - Region-based diagnosis heatmaps
-  - Confidence scores for transparency
-
----
-
-## 🔒 Privacy & Clinical Trust
-
-- Fully on-device or encrypted cloud processing
-- No facial image is stored or reused without user consent
-- System includes **"no recommendation needed"** output to prevent overtreatment
-- Designed with input from **dermatologists and skin experts**
-
----
-
-## 🛠️ Tech Stack
-
-| Task                        | Tool / Framework              |
-|-----------------------------|-------------------------------|
-| Vision Modeling             | `PyTorch`, `Swin-T`, `DINOv2` |
-| Tabular Modeling            | `TabTransformer`, `CatBoost` |
-| RL Recommender              | `Stable-Baselines3`, `Ray RLlib` |
-| Explainability              | `SHAP`, `Grad-CAM`, `Captum`  |
-| Deployment                  | `FastAPI`, `ONNX`, `Streamlit` |
-| Tracking                    | `Weights & Biases`            |
-
----
-
-## 📅 Roadmap
-
-- ✅ **Phase 1**: Architecture setup, dataset collection, baseline training
-- 🔜 **Phase 2**: Dermatologist feedback, fairness validation
-- 🔜 **Phase 3**: Reinforcement learning recommender + app/web interface
-
----
-
-## 🤝 Collaboration
-
-Interested in contributing or collaborating (especially dermatologists or med students)?  
-## Email:  keshavchandel05@gmail.com
+```bash
+pip install torch tensorflow matplotlib
 
