@@ -106,7 +106,7 @@ Welcome to my personal ML journey where I build everything from **scratch using 
 ### ✅ Phase 11: Neural Network (1-Layer / CNN)
 * Built a single-layer dense neural network.
 * Implemented **forward propagation, ReLU, softmax**, and **cross-entropy loss**.
-* Added **gradient descent weight updates**.
+* will Add **loss and gradient descent weight updates**.
 * Built a simple CNN using NumPy and later PyTorch for GPU acceleration.
 * Tested on MNIST dataset with batch processing.  
 
