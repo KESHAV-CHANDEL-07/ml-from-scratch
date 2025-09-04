@@ -3,7 +3,7 @@ import pandas as pd
 from graphviz import Digraph
 
 # Load dataset (heart.csv should have header row)
-df = pd.read_csv("heart.csv")
+df = pd.read_csv(r"c:\Users\kesha\OneDrive\Desktop\Projects\ml-from-scratch\Phase_7_Random_forest\dataset\heart.csv")
 df = df.dropna()
 df = df.astype(float)
 
@@ -134,7 +134,24 @@ y_pred = predict_forest(forest, X_test)
 print("Accuracy:", round(accuracy(y_test, y_pred), 3))
 classification_report(y_test, y_pred)
 
-# Visualize one tree
-feature_names = list(df.drop("target", axis=1).columns)
-class_names = sorted([str(c) for c in np.unique(y)])
-visualize_tree(forest[0], feature_names, class_names)
+y_pred = predict_forest(forest, X_test)
+print("Accuracy:", round(accuracy(y_test, y_pred), 3))
+classification_report(y_test, y_pred)
+
+# Confusion Matrix
+
+import matplotlib.pyplot as plt 
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+
+cm = confusion_matrix(y_test, y_pred)
+disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=np.unique(y))
+disp.plot(cmap="Blues")
+plt.title("Confusion Matrix")
+plt.savefig("confusion_matrix.png", dpi=300, bbox_inches="tight") 
+plt.show() 
+
+
+# # Visualize one tree
+# feature_names = list(df.drop("target", axis=1).columns)
+# class_names = sorted([str(c) for c in np.unique(y)])
+# visualize_tree(forest[0], feature_names, class_names)
