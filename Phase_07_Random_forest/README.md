@@ -105,16 +105,16 @@ The visualization shows:
 - Feature splits and thresholds  
 - Class distributions  
 - Leaf node predictions  
+<br>
+<hr>
 
----
-
-## 🚀 Future Work
-
+## 🚀 Future Work 
 - Implement **Entropy/Cross-Entropy** as a split criterion.  
 - Try **Gradient Boosting (XGBoost, LightGBM)** for comparison.  
-- Extend to a **web app (Streamlit/Flask)** for interactive predictions.  
-- Explore **SHAP/LIME** for better feature interpretability.  
+- Extend to a **web app (Streamlit/Flask)** for interactive predictions**Done (once)**.
+<br>
+<br>
+<br>
+<hr>
 
----
-
-### ✨ Built with 💖 by **Keshav Chandel**
+# ✨ Built with 💖 by ***Keshav Chandel***
