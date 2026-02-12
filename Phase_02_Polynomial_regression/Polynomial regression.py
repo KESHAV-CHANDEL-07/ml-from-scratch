@@ -32,7 +32,7 @@ def compute_loss(y_true, y_pred):
 
 # 7. Training loop
 learning_rate = 0.001
-epochs = 10000
+epochs = 1000
 losses = []
 
 for i in range(epochs):
