@@ -50,7 +50,7 @@ def predict(X_input):
     z = X_input @ w + b  # shape: (m,)
     return sigmoid(z) 
 
-def compute_loss(y_true, y_pred):
+def compute_loss(y_true, y_pred):   #Binary cross entropy loss function 
     eps = 1e-15  # to prevent log(0)
     y_pred = np.clip(y_pred, eps, 1 - eps)
     return -np.mean(y_true.flatten() * np.log(y_pred) + (1 - y_true.flatten()) * np.log(1 - y_pred))
